@@ -36,7 +36,7 @@
               </div>
             </a>
             <a
-              href="records"
+              href="employees"
               class="uk-box-shadow-small"
             >
               <div class="uk-inline">
@@ -47,7 +47,7 @@
                   height="auto"
                 >
                 <div class="uk-overlay uk-overlay-default uk-position-bottom">
-                  <p>Recepciones</p>
+                  <p>Empleados</p>
                 </div>
               </div>
             </a>
@@ -82,6 +82,24 @@
                 >
                 <div class="uk-overlay uk-overlay-default uk-position-bottom">
                   <p>Entregas</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a
+              href="records"
+              class="uk-box-shadow-small"
+            >
+              <div class="uk-inline">
+                <img
+                  src="../assets/cl.png"
+                  alt=""
+                  width=""
+                  height="auto"
+                >
+                <div class="uk-overlay uk-overlay-default uk-position-bottom">
+                  <p>Recepciones</p>
                 </div>
               </div>
             </a>
