@@ -15,7 +15,7 @@
               class=" uk-button uk-button-text uk-margin-large-left"
               @click="redi"
             >
-              <span uk-icon="icon: plus-circle" /> Añadir recepción
+              <span uk-icon="icon: plus-circle" /> Añadir recepción no chilera
             </button>
           </div>
           <div>
