@@ -14,6 +14,7 @@ import FinalizeTracing from "@/components/tracings/FinalizeTracing";
 import Found from "@/components/Page404";
 import Pruebas from "@/components/pruebas";
 import Customer from "@/components/users/Customer";
+import Employees from "@/components/users/Employee";
 
 Vue.use(Router);
 
@@ -92,6 +93,14 @@ const router = new Router({
             path: "/delivereds",
             name: "Delivereds",
             component: Delivereds,
+            meta: {
+                autentificate: true
+            }
+        },
+        {
+            path: "/employees",
+            name: "Employees",
+            component: Employees,
             meta: {
                 autentificate: true
             }
