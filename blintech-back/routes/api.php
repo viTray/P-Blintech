@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')->group(function(){
+});
     Route::apiResource('customers', 'CustomerController');
     Route::apiResource('receptions', 'ReceptionController');
     Route::apiResource('receptionImages', 'ReceptionImageController');
@@ -30,7 +31,6 @@ Route::middleware('auth:api')->group(function(){
     Route::apiResource('accessorys', 'AccessoryController');
     Route::apiResource('exteriors', 'ExteriorController');
     Route::apiResource('delivereds', 'DeliveredController');
-});
     Route::post('mail', 'MailB');
     Route::get('imprimir', 'Gpdf@generate');
 

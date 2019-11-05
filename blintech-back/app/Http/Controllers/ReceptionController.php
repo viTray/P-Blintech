@@ -10,6 +10,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use PDF;
 
 class ReceptionController extends Controller
@@ -23,23 +24,7 @@ class ReceptionController extends Controller
     public function index()
     {
         $data = [];
-        $data =  Reception::with(["customer", "general"
-        ])->
-        when(request()->state == 'all', function ($query) {
-            if(request()->type ==  'all'){
-                return $query->where('id', '>', 0 );
-            }else{
-                return $query->where('type', request()->type);
-            }
-        })->
-        when(request()->state != 'all', function ($query) {
-            if(request()->type ==  'all'){
-                return $query->where('state', request()->state);
-            }else{
-                return $query->where('state', request()->state)->where('type', request()->type);
-            }
-        })->
-        paginate(8);
+        $data =  DB::table('cuarto')->get();
         return response()->json([
             'receptions'=> $data,
             'msg'=> 'ok'
